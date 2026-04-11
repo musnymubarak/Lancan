@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
+import logoUrl from '../images/logo.png';
 
 const pathwayLinks = [
   { name: 'Express Entry', path: '/services#express' },
@@ -44,7 +45,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/src/images/logo.png" alt="LanCan Immigration" className="h-[40px] object-contain bg-white/90 rounded p-1" />
+              <img src={logoUrl} alt="LanCan Immigration" className="h-[40px] object-contain bg-white/90 rounded p-1" />
             </div>
             <p className="text-sm text-white/50 leading-relaxed mb-6">
               A full service immigration consultancy firm in Ontario, Canada. Headed by a Regulated Canadian Immigration Consultant with over 30 years of experience.

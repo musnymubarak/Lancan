@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import logoUrl from '../images/logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -101,7 +102,7 @@ export default function Navbar() {
         <div className="page-container flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src="/src/images/logo.png" alt="LanCan Immigration" className="h-[50px] object-contain group-hover:scale-105 transition-transform bg-white/90 rounded-lg p-1" />
+            <img src={logoUrl} alt="LanCan Immigration" className="h-[50px] object-contain group-hover:scale-105 transition-transform bg-white/90 rounded-lg p-1" />
           </Link>
 
           {/* Desktop Navigation */}
