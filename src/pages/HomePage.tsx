@@ -112,7 +112,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Floating card 1 */}
-                  <div className="absolute -bottom-6 -left-6 liquid-glass-light rounded-2xl p-5">
+                  <div className="absolute -bottom-6 -left-6 glass-light border border-white/50 shadow-premium rounded-2xl p-5">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center">
                         <Shield className="w-6 h-6 text-cyan-600" />
@@ -125,7 +125,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Floating card 2 */}
-                  <div className="absolute -top-4 -right-4 liquid-glass-light rounded-2xl p-5">
+                  <div className="absolute -top-4 -right-4 glass-light border border-white/50 shadow-premium rounded-2xl p-5">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 bg-blue-950 rounded-xl flex items-center justify-center">
                         <CheckCircle2 className="w-6 h-6 text-cyan-500" />
