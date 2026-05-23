@@ -66,8 +66,8 @@ export default function ContactPage() {
                     <div className="flex items-start gap-3">
                       <MapPin className="w-4 h-4 text-cyan-500 shrink-0 mt-1" />
                       <p className="text-sm text-white/70">
-                        402-2 County Court Blvd<br />
-                        Brampton, ON, L6W 3W8<br />
+                        120 Matheson Blvd East, Suite – 202<br />
+                        Mississauga, Ontario. L4Z 1X1<br />
                         Canada
                       </p>
                     </div>
@@ -78,6 +78,10 @@ export default function ContactPage() {
                     <a href="mailto:lancanimmigration@gmail.com" className="flex items-center gap-3 text-sm text-white/70 hover:text-cyan-400 transition-colors break-all">
                       <Mail className="w-4 h-4 text-cyan-500 shrink-0" />
                       lancanimmigration@gmail.com
+                    </a>
+                    <a href="mailto:info@lancanimmigration.com" className="flex items-center gap-3 text-sm text-white/70 hover:text-cyan-400 transition-colors break-all">
+                      <Mail className="w-4 h-4 text-cyan-500 shrink-0" />
+                      info@lancanimmigration.com
                     </a>
                   </div>
                 </div>
@@ -236,20 +240,41 @@ export default function ContactPage() {
       {/* ═══════ MAP SECTION ═══════ */}
       <section className="bg-gray-50">
         <div className="page-container py-12">
-          <AnimatedSection>
-            <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-100 h-[400px]">
-              <iframe
-                title="LanCan Immigration Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.3844944671654!2d-79.75978!3d43.7315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b15fd20024af9%3A0x1df2c61e3c7a9ade!2s2%20County%20Court%20Blvd%20%23402%2C%20Brampton%2C%20ON%20L6W%203W8!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Mississauga Office Map */}
+            <AnimatedSection>
+              <h3 className="text-lg font-heading font-bold text-blue-950 mb-4 text-center md:text-left">Canada Office (Mississauga)</h3>
+              <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-100 h-[350px]">
+                <iframe
+                  title="LanCan Immigration Mississauga Office Location"
+                  src="https://maps.google.com/maps?q=120%20Matheson%20Blvd%20East,%20Suite%20202,%20Mississauga,%20Ontario%20L4Z%201X1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </AnimatedSection>
+
+            {/* Colombo Office Map */}
+            <AnimatedSection delay={0.1}>
+              <h3 className="text-lg font-heading font-bold text-blue-950 mb-4 text-center md:text-left">Sri Lanka Branch (Colombo)</h3>
+              <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-100 h-[350px]">
+                <iframe
+                  title="LanCan Immigration Colombo Office Location"
+                  src="https://maps.google.com/maps?q=73/10%20Saman%20Uyana%20Kumaragewatta,%20Battaramulla,%20Sri%20Lanka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
     </>

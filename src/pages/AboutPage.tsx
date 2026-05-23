@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Award, Scale, Globe, BookOpen, ArrowRight, CheckCircle2 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
+import ciccLogoUrl from '../images/cicc-logo-transparent.png';
+import canadaImg from '../images/canada.jpeg';
 
 export default function AboutPage() {
   return (
@@ -33,7 +35,7 @@ export default function AboutPage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-premium">
                   <img
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                    src={canadaImg}
                     alt="LanCan Immigration Office"
                     className="w-full h-[450px] object-cover"
                   />
@@ -134,11 +136,11 @@ export default function AboutPage() {
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-white/70">Managing Director, LanCan Immigration</span>
+                    <span className="text-white/70">Managing Director, Lancan Immigration Consultants</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-white/70">RCIC of ICCRC</span>
+                    <span className="text-white/70">CICC of #R510775</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
@@ -148,6 +150,10 @@ export default function AboutPage() {
                     <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
                     <span className="text-white/70">30+ Years in Law & Immigration</span>
                   </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/10 flex justify-center">
+                  <img src={ciccLogoUrl} alt="CICC Certified Logo" className="h-[100px] object-contain" />
                 </div>
               </div>
             </AnimatedSection>
@@ -166,7 +172,7 @@ export default function AboutPage() {
               <AnimatedSection delay={0.1}>
                 <div className="prose prose-gray max-w-none">
                   <p className="text-gray-500 leading-relaxed mb-6">
-                    Chandralal Attanapola, LL.B, LL.M, RCIC is a Regulated Canadian Immigration Consultant of Immigration Consultants of Canada Regulatory Council (ICCRC). He is Managing Director of LanCan Immigration Consultants which provides immigration consultancy services.
+                    Chandralal Attanapola, LL.B, LL.M, RCIC is a Regulated Canadian Immigration Consultant of the College of Immigration and Citizenship Consultants (CICC). He is Managing Director of LanCan Immigration Consultants which provides immigration consultancy services.
                   </p>
 
                   <p className="text-gray-500 leading-relaxed mb-6">
@@ -174,7 +180,7 @@ export default function AboutPage() {
                   </p>
 
                   <p className="text-gray-500 leading-relaxed mb-6">
-                    Prior to becoming an Immigration Consultant, Chandralal has practiced as litigation counsel in both the original and appellate courts in Sri Lanka. Previously he worked as Director General of the Textile Quota Board, Assistant General Manager of Union Assurance Plc in Sri Lanka and Underwriting Manager at Arab Orient Insurance Company, United Arab Emirates. He worked in Canada as Bodily Injury Claim Specialist at York Fire and Casualty Insurance Company in Mississauga.
+                    Prior to becoming an Immigration Consultant, Chandralal has practiced as litigation counsel in both the original and appellate courts in Sri Lanka. Previously he held senior positions both in the Government and private sector in Sri Lanka. He also worked as Underwriting Manager at Arab Orient Insurance Company, United Arab Emirates. He worked in Canada as Bodily Injury Claim Specialist at York Fire and Casualty Insurance Company in Mississauga.
                   </p>
 
                   <p className="text-gray-500 leading-relaxed mb-6">
@@ -183,12 +189,12 @@ export default function AboutPage() {
                 </div>
               </AnimatedSection>
 
-              {/* ICCRC Section */}
+              {/* CICC Section */}
               <AnimatedSection delay={0.15}>
                 <div className="mt-8 p-6 bg-cyan-100 rounded-2xl border border-cyan-200">
-                  <h4 className="font-heading font-bold text-blue-950 mb-3">ICCRC Accreditation</h4>
+                  <h4 className="font-heading font-bold text-blue-950 mb-3">CICC Accreditation</h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Chandralal Attanapola is a Regulated Canadian Immigration Consultant of the Immigration Consultant of Canada Regulatory Council (ICCRC). ICCRC is the only regulatory body for the Immigration Consultants in Canada. Citizenship and Immigration Canada (CIC) has recognized members of the ICCRC as authorized representatives who can represent people on immigration matters.
+                    Chandralal Attanapola is a Regulated Canadian Immigration Consultant of the College of Immigration and Citizenship Consultants (CICC). CICC is the only regulatory body for the Immigration Consultants in Canada. Citizenship and Immigration Canada (CIC) has recognized members of the ICCRC as authorized representatives who can represent people on immigration matters.
                   </p>
                 </div>
               </AnimatedSection>

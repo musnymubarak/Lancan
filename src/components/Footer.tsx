@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
 import logoUrl from '../images/logo.png';
+import ciccLogoUrl from '../images/cicc-logo-transparent.png';
 
 const pathwayLinks = [
   { name: 'Express Entry', path: '/services#express' },
@@ -45,11 +46,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src={logoUrl} alt="LanCan Immigration" className="h-[40px] object-contain bg-white/90 rounded p-1" />
+              <img src={logoUrl} alt="LanCan Immigration" className="h-[40px] object-contain brightness-0 invert" />
             </div>
             <p className="text-sm text-white/50 leading-relaxed mb-6">
               A full service immigration consultancy firm in Ontario, Canada. Headed by a Regulated Canadian Immigration Consultant with over 30 years of experience.
             </p>
+            <div className="mt-6">
+              <img src={ciccLogoUrl} alt="CICC Certified" className="h-[90px] object-contain" />
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -98,13 +102,16 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-cyan-500 shrink-0 mt-0.5" />
-                  <p className="text-sm text-white/50">402-2 County Court Blvd<br />Brampton, ON, L6W 3W8</p>
+                  <p className="text-sm text-white/50">120 Matheson Blvd East, Suite – 202<br />Mississauga, Ontario. L4Z 1X1</p>
                 </div>
                 <a href="tel:+16476737569" className="flex items-center gap-3 text-sm text-white/50 hover:text-cyan-400 transition-colors">
                   <Phone className="w-4 h-4 text-cyan-500" /> +1 647 673 7569
                 </a>
                 <a href="mailto:lancanimmigration@gmail.com" className="flex items-center gap-3 text-sm text-white/50 hover:text-cyan-400 transition-colors">
                   <Mail className="w-4 h-4 text-cyan-500" /> lancanimmigration@gmail.com
+                </a>
+                <a href="mailto:info@lancanimmigration.com" className="flex items-center gap-3 text-sm text-white/50 hover:text-cyan-400 transition-colors">
+                  <Mail className="w-4 h-4 text-cyan-500" /> info@lancanimmigration.com
                 </a>
               </div>
             </div>
@@ -131,12 +138,9 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-white/10">
-        <div className="page-container py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="page-container py-6 text-center">
           <p className="text-xs text-white/30">
             © {new Date().getFullYear()} LanCan Immigration Consultants. All rights reserved.
-          </p>
-          <p className="text-xs text-white/30">
-            Designed & developed by Cinnamon Media Inc
           </p>
         </div>
       </div>

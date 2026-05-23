@@ -15,6 +15,12 @@ import AnimatedSection from '../components/AnimatedSection';
 import CounterAnimation from '../components/CounterAnimation';
 import ServiceCard from '../components/ServiceCard';
 
+import homeImg from '../images/home.jpeg';
+import homw2Img from '../images/homw-2.jpeg';
+import canadaHdImg from '../images/canada-hd.jpeg';
+import canadaImg from '../images/canada.jpeg';
+import heroBgImg from '../images/hero-backround.jpeg';
+
 export default function HomePage() {
   return (
     <>
@@ -25,7 +31,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=1920&q=80')`,
+            backgroundImage: `url(${heroBgImg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -39,7 +45,7 @@ export default function HomePage() {
               <AnimatedSection delay={0}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/10 mb-8">
                   <span className="w-2 h-2 bg-cyan-500 rounded-full" />
-                  <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest">RCIC Certified Consultants</span>
+                  <span className="text-xs font-semibold text-cyan-400 uppercase tracking-widest">CICC  Certified Consultants</span>
                 </div>
               </AnimatedSection>
 
@@ -86,7 +92,7 @@ export default function HomePage() {
                   </div>
                   <div className="w-px h-10 bg-white/10" />
                   <div>
-                    <p className="text-3xl font-heading font-bold text-cyan-500">ICCRC</p>
+                    <p className="text-3xl font-heading font-bold text-cyan-500">CICC</p>
                     <p className="text-xs text-white/40 mt-1">Certified</p>
                   </div>
                   <div className="w-px h-10 bg-white/10" />
@@ -105,23 +111,10 @@ export default function HomePage() {
                   {/* Main Image */}
                   <div className="rounded-2xl overflow-hidden shadow-2xl">
                     <img
-                      src="https://images.unsplash.com/photo-1569974507005-6dc61f97fb5c?w=600&q=80"
-                      alt="Canadian Parliament Building"
+                      src={canadaImg}
+                      alt="Canada Landscape"
                       className="w-full h-[500px] object-cover"
                     />
-                  </div>
-
-                  {/* Floating card 1 */}
-                  <div className="absolute -bottom-6 -left-6 glass-light border border-white/50 shadow-premium rounded-2xl p-5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-cyan-600" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-bold text-blue-950">RCIC Licensed</p>
-                        <p className="text-xs text-gray-400">Regulated Consultant</p>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Floating card 2 */}
@@ -159,7 +152,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-premium">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+                    src={homeImg}
                     alt="Professional consultation"
                     className="w-full h-[450px] object-cover"
                   />
@@ -211,7 +204,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
                     <CheckCircle2 className="w-5 h-5 text-cyan-500 shrink-0" />
-                    <span className="text-sm font-medium text-blue-950">ICCRC Authorized</span>
+                    <span className="text-sm font-medium text-blue-950">CICC Authorized</span>
                   </div>
                 </div>
               </AnimatedSection>
@@ -300,7 +293,7 @@ export default function HomePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 gradient-blue" />
         <div className="absolute inset-0" style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=1920&q=80')`,
+          backgroundImage: `url(${canadaHdImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.1,
@@ -365,8 +358,8 @@ export default function HomePage() {
                   },
                   {
                     icon: <Shield className="w-5 h-5" />,
-                    title: 'RCIC Certified',
-                    desc: 'Headed by a Regulated Canadian Immigration Consultant recognized by ICCRC.',
+                    title: 'CICC Certified',
+                    desc: 'Headed by a Regulated Canadian Immigration Consultant recognized by CICC.',
                   },
                   {
                     icon: <Award className="w-5 h-5" />,
@@ -395,7 +388,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-premium">
                   <img
-                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80"
+                    src={homw2Img}
                     alt="Immigration consultation meeting"
                     className="w-full h-[550px] object-cover"
                   />

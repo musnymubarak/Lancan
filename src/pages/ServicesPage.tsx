@@ -5,25 +5,26 @@ import AnimatedSection from '../components/AnimatedSection';
 
 const categories = [
   {
-    name: 'Immigrate',
-    sections: [
-      { id: 'express', label: 'Express Entry' },
-      { id: 'fsw', label: 'Federal Skilled Workers' },
-      { id: 'fstp', label: 'Skilled Trade Programme' },
-      { id: 'cec', label: 'Canadian Experience Class' },
-      { id: 'iese', label: 'Investors & Entrepreneurs' },
-      { id: 'fs', label: 'Family Sponsorship' },
-      { id: 'pn', label: 'Provincial Nominees' },
-      { id: 'refugees', label: 'Refugees' },
-      { id: 'citizenship', label: 'Citizenship' },
-      { id: 'pcr', label: 'PR Card Renewal' },
-    ],
-  },
-  {
     name: 'Visit & Study',
     sections: [
       { id: 'vc', label: 'Visit Canada' },
       { id: 'sic', label: 'Study in Canada' },
+    ],
+  },
+  {
+    name: 'Immigrate',
+    sections: [
+      { id: 'express', label: 'Express Entry' },
+      { id: 'fsw', label: 'Federal Skilled Workers' },
+      { id: 'fstp', label: 'Federal Skilled Trade' },
+      { id: 'cec', label: 'Canadian Experience Class' },
+      { id: 'iese', label: 'Investors & Entrepreneurs' },
+      { id: 'fs', label: 'Family Sponsorship' },
+      { id: 'pn', label: 'Provincial Nominees (PNP)' },
+      { id: 'refugees', label: 'Refugees & Protection' },
+      { id: 'rcp', label: 'Refugee Claims Process' },
+      { id: 'citizenship', label: 'Citizenship' },
+      { id: 'pcr', label: 'PR Card Renewal' },
     ],
   },
   {
@@ -38,10 +39,9 @@ const categories = [
     sections: [
       { id: 'ah', label: 'Admissibility Hearings' },
       { id: 'dr', label: 'Detention Reviews' },
-      { id: 'iad', label: 'Immigration Appeal Division' },
-      { id: 'rcp', label: 'Refugee Claims Process' },
-      { id: 'rad', label: 'Refugee Appeal Division' },
-      { id: 'prra', label: 'PRRA' },
+      { id: 'iad', label: 'Immigration Appeal (IAD)' },
+      { id: 'rad', label: 'Refugee Appeal (RAD)' },
+      { id: 'prra', label: 'PRRA Assessment' },
     ],
   },
 ];
@@ -62,7 +62,7 @@ function EmailCTA() {
 
 export default function ServicesPage() {
   const location = useLocation();
-  const [expandedNav, setExpandedNav] = useState<string[]>(['Immigrate']);
+  const [expandedNav, setExpandedNav] = useState<string[]>(['Visit & Study']);
 
   // Scroll to hash on load
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function ServicesPage() {
             </div>
             <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-4">Our Services</h1>
             <p className="text-lg text-white/50 max-w-2xl">
-              Comprehensive immigration solutions covering all pathways to Canada — from Express Entry to Refugee Protection.
+              Comprehensive Canadian Immigration Services covering all pathways to Canada — from Express Entry to Refugee Protection.
             </p>
           </AnimatedSection>
         </div>
@@ -154,280 +154,318 @@ export default function ServicesPage() {
 
             {/* Main Content */}
             <div className="flex-1 max-w-4xl">
-              {/* ─────── IMMIGRATE ─────── */}
+              {/* ─────── VISIT & STUDY ─────── */}
               <div className="mb-8">
+                <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Visit & Study</span>
+              </div>
+
+              {/* 11. Visit Canada */}
+              <article id="vc" className="scroll-mt-28 mb-16">
+                <AnimatedSection>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">1. Visit Canada</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-6 mb-4">Temporary Resident Visa (Tourist)</h3>
+                    <p>Citizens of certain countries require a Temporary Resident Visa to visit Canada. Applications are submitted to the nearest Canadian embassy. Applicants must demonstrate ties to their home country (employment, assets, and family) and the intention to leave Canada at the end of their authorized visit.</p>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Business Visitor</h3>
+                    <p>A Business Visitor enters Canada to explore investment opportunities or advance business relationships with Canadian companies, without entering the Canadian labour market. The principal place of business and source of income must remain outside Canada. A letter of invitation from a Canadian business partner is typically required.</p>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Parent and Grandparent Super Visa</h3>
+                    <p>You can visit your children or grandchildren (if they’re a permanent resident, a Canadian citizen or a registered Indian) for 5 years at a time with a super visa. It provides multiple entries for a period of up to 10 years. You can’t include dependents in this application.</p>
+                    <p>Requirements include:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Child/grandchild in Canada is a citizen or PR and meets minimum income threshold</li>
+                      <li>Child/grandchild will provide financial support to the applicant</li>
+                      <li>Valid Canadian medical insurance coverage for at least one year</li>
+                      <li>Passed an immigration medical exam</li>
+                      <li>Child or grandchild must satisfy the minimum necessary income requirement</li>
+                    </ul>
+                  </div>
+                  <EmailCTA />
+                </AnimatedSection>
+              </article>
+
+              {/* 12. Study in Canada */}
+              <article id="sic" className="scroll-mt-28 mb-16">
+                <AnimatedSection>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">2. Study in Canada</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>To study in Canada, foreign nationals require a Study Permit — a written authorization to engage in studies at an accredited Canadian institution. Canada hosts over 125 universities and colleges offering 10,000+ programmes, plus 138+ community colleges and institutions with post-graduate and bachelor's degrees.</p>
+                    <p>Study permit eligibility requirements:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Acceptance letter from a Canadian school, college, university, or other institution which are recognized as a designated learning institution (DLI)</li>
+                      <li>Sufficient funds to cover tuition fees and living expenses for the programme duration</li>
+                      <li>Satisfactory evidence of intent to leave Canada at the end of the authorized study period</li>
+                      <li>Good health</li>
+                    </ul>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Provincial Attestation Letter (PAL)</h3>
+                    <p>A Provincial Attestation Letter (PAL) is a mandatory document issued by a Canadian province or territory that proves an international student has been allocated a spot under the federal international student enrollment cap. You must submit your PAL to Immigration, Refugees and Citizenship Canada (IRCC) alongside your study permit application. You as a student do not need to apply for PAL. Your DLI secures the PAL from the relevant province.</p>
+                    <p>The following categories of students are exempted from the PAL requirement:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li><strong>Graduate Students:</strong> Students applying for master’s or doctoral degree programs at a public DLI.</li>
+                      <li><strong>Primary/Secondary Students:</strong> Children attending preschool, primary school, or high school (up to Grade 12).</li>
+                    </ul>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">On-Campus Employment</h3>
+                    <p>Full-time post-secondary students may work without a work permit on the campus of their registered institution.</p>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Off-Campus Work</h3>
+                    <p>Study permit holders enrolled full-time at a Designated Learning Institution (DLI) may work up to 24 hours per week during academic sessions and full-time during scheduled breaks such as winter, summer and reading week, without requiring a separate work permit.</p>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Post-Graduate Work Permit Programme (PGWP)</h3>
+                    <p>Graduates from participating post-secondary institutions may apply for a work permit (up to 3 years) to gain Canadian work experience without an LMIA requirement. International students who have obtained Canadian work experience through PGWP are eligible to apply for Permanent Residence under various Provincial Nominee Programmes.</p>
+                  </div>
+                  <EmailCTA />
+                </AnimatedSection>
+              </article>
+
+              {/* ─────── IMMIGRATE ─────── */}
+              <div className="mt-20 mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Immigrate to Canada</span>
               </div>
 
-              {/* Express Entry */}
+              {/* 1. Express Entry */}
               <article id="express" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Express Entry</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>The Canadian government has introduced a new immigration system that will offer "Express Entry" to qualified immigrants starting from January 1, 2015. The Express Entry is not an immigration program but rather a system used by the Citizenship and Immigration Canada (CIC) to select candidates who are qualified to immigrate to Canada under any of the following key economic immigration programs.</p>
-                    <ul>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">3. Express Entry</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>The Express Entry system is the primary federal mechanism for managing applications under key economic immigration programs. It is not an immigration program itself, but a selection system managing intake for the following:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
                       <li>Federal Skilled Worker Program</li>
                       <li>Federal Skilled Trades Program</li>
                       <li>Canadian Experience Class</li>
-                      <li>Provincial Nominee Programs (partly)</li>
+                      <li>Provincial Nominee Programs (partially)</li>
                     </ul>
-                    <p>The candidate eligible to immigrate to Canada under any of the above programs may enter the Express Entry pool by completing an online Express Entry Profile. The candidate are required to provide information about their work experience, language ability, education, age and other personal information. Once the profile is complete the candidate will be given points according to a Comprehensive Ranking System (CRS). The CRS points are based on the following:</p>
-                    <ul>
+                    <p>Eligible candidates submit an online Express Entry Profile providing details on work experience, language ability, education, age, and other personal information. Candidates are scored using a Comprehensive Ranking System (CRS) based on:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
                       <li>Core human capital factors</li>
-                      <li>Accompanying spouse or common-law partner factors, if applicable</li>
+                      <li>Accompanying spouse or common-law partner factors (if applicable)</li>
                       <li>Skill transferability factors</li>
-                      <li>Qualifying offer of arranged employment factor</li>
+                      <li>Qualifying offer of arranged employment</li>
                       <li>Provincial nomination factors</li>
                     </ul>
-                    <p>In addition the candidate who do not have an offer of arranged employment or provincial nomination are required to register themselves with the job bank of Canada. The CIC will regularly invite the highest-ranking candidate from the pool to apply to immigrate. Once candidates have been invited to apply for permanent residence, they will need to submit a complete application and will have to meet eligibility and admissibility requirements such as health and security checks. The candidates will have up to 60 days to submit their application online.</p>
-                    <p>We as immigration consultants will initially assess your eligibility to apply under any of the above program. If you are eligible we will complete your on line profile and registration with the Canadian Job Bank. Upon receipt of "Invitation to Apply" we will submit your online application for permanent residence.</p>
+                    <p>Candidates without an employment offer or provincial nomination must also register with the Canadian Job Bank. IRCC periodically issues Invitations to Apply (ITAs) to the highest-ranking candidates. Once invited, applicants have 60 days to submit a complete permanent residence application.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Federal Skilled Workers */}
+              {/* 2. Federal Skilled Workers */}
               <article id="fsw" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Federal Skilled Workers</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Under the Federal skill worker programme currently in force in order to satisfy the basic eligibility, the applicant must:</p>
-                    <ul>
-                      <li>Have one year of continuous full-time (or an equal amount of continuous part-time) paid work experience in one of the eligible occupations within the last 10 years, OR</li>
-                      <li>Have a valid offer of arranged employment, OR</li>
-                      <li>Be an international student who is enrolled in a PhD programme in Canada or who has graduated from a Canadian PhD programme within the past twelve months</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">4. Federal Skilled Workers</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>To satisfy basic eligibility under the Federal Skilled Worker Programme, the applicant must meet one of the following:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>One year of continuous full-time (or equivalent part-time) paid work experience in an eligible occupation within the last 10 years.</li>
+                      <li>The work experience must be in one of such TEER categories as TEER 0, 1, 2 or 3 of the National Occupation Classification which is Canada’s official system for classifying jobs. The TEER stands for training, education, experience and responsibilities. You must choose the NOC that most closely aligns with your work experience.</li>
+                      <li>Must have the Minimum level of Language requirement: That is CLB 7 in all 4 four skilled areas for TEER 0 or 1 Jobs and CLB 5 for in all four skilled areas for TEER 2 or 3 Jobs.</li>
+                      <li>Education: If you went to a school in Canada, You must have a certificate, diplomas or degree from a Canadian secondary institution or post-secondary institution. If you have foreign education, you must have a completed education credential Assessment from an approved credential assessment institution recognized by Immigration Canada.</li>
+                      <li>The applicant must also meet minimum requirements in work experience, language, and education. Eligible applicants are assessed against six selection factors: education level, language proficiency, work experience length, age, arranged employment, and adaptability. A score of 67 or above out of 100 is required for selection as a Permanent Resident.</li>
                     </ul>
-                    <p>The applicant must also satisfy such minimum requirements as work experience, language and education. Once the applicant meets the above eligibility criteria and minimum requirements the applicant will be assessed against a point system consisting of six selection factors namely level of education, language proficiency, length of work experience, age, arrange employment and adaptability. Those who will reach the pass mark of 67 and over will be eligible for selection as Permanent Residents under the programme.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Federal Skilled Trade Programme */}
+              {/* 3. Federal Skilled Trade Programme */}
               <article id="fstp" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Federal Skilled Trade Programme</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>The Federal Skilled Trades Programme is for people who want to become permanent residents based on being qualified in a skilled trade. The applicant must:</p>
-                    <ul>
-                      <li>Have at least two years of full time work experience (or an equal amount of part time work experience) in a skilled trade within the five years after becoming qualified to independently practice that occupation</li>
-                      <li>Meet the job requirement for that skilled trade as per National Occupation Classification (NOC)</li>
-                      <li>Have an offer of full time employment for a total period of at least one year or a certificate of qualification in that skilled trade issued by a provincial or territorial body</li>
-                      <li>Meet the required levels in English or French for each language ability</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">5. Federal Skilled Trade Programme</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>This programme targets individuals seeking permanent residence based on qualification in a skilled trade.</p>
+                    <p>Skilled trades need specialized knowledge and hands-on work experience. You’ll need an apprenticeship for most trades.</p>
+                    <p>Skilled tradespeople may work in sectors such as:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-2 text-gray-600">
+                      <li>construction</li>
+                      <li>transportation</li>
+                      <li>manufacturing and industrial</li>
+                      <li>natural resources and agriculture</li>
                     </ul>
-                    <p>If you satisfy the above criteria, you will be eligible to become a permanent resident of Canada.</p>
+                    <p>Your skilled work experience must be in one of the NOC Major groups 72, 73, 82, 83 92 or 93 and Minor groups 6320 or unit group 62200.</p>
+                    <p>Applicant must have at least 2 years of full-time work experience (or 3,120 hours total) in a skilled trade within the 5 years before you apply.</p>
+                    <p>The applicant must have:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-2 text-gray-600">
+                      <li>At least two years of full-time paid work experience in a skilled trade within five years of becoming independently qualified to practice</li>
+                      <li>Meeting NOC job requirements for the applicable skilled trade</li>
+                      <li>A full-time employment offer for at least one year, or a certificate of qualification issued by a provincial/territorial body</li>
+                      <li>Meeting the required language levels in English or French across all four abilities. The applicant must have CLB 5 language skills for Speaking and Listening and CLB 4 for Reading and Writing.</li>
+                    </ul>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Canadian Experience Class */}
+              {/* 4. Canadian Experience Class */}
               <article id="cec" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Canadian Experience Class</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Individuals who have gained skilled work experience in Canada, such as temporary foreign workers and foreign students who graduated with a Canadian educational credential, often have the qualities to make a successful transition from temporary to permanent resident status as they are familiar with Canadian society, and have demonstrated the ability to contribute to the Canadian economy.</p>
-                    <p>If you are proficient in English or French and have qualifying Canadian work experience, you may be eligible to apply for permanent residence under the Canadian Experience Class. Applications can be submitted by individuals who have at least 12 months of qualifying Canadian work experience in a managerial, professional, skilled trade or technical occupation, and who meet the language proficiency requirements for their occupational skill level.</p>
-                    <ul>
-                      <li>The one year qualifying work experience (or the equivalent in part-time) in Canada must be in occupations that falls under Skill Type 0, or Skill Level A or B of the National Occupational Classification (NOC)</li>
-                      <li>The work experience must have been obtained within the 36 months preceding the date their application is received</li>
-                      <li>The required level of English or French language proficiency (speaking, reading, listening and writing) for their occupational skill level</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">6. Canadian Experience Class (CEC)</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>The CEC provides a pathway for temporary foreign workers and international students with Canadian credentials to transition to permanent resident status. Eligible applicants must have:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>At least 12 months of qualifying Canadian work experience in an occupation in any TEER 0, 1 2, or 3 categories of the National Occupation Classification (NOC) occupation.</li>
+                      <li>Obtained the Work Experience within 36 months preceding the application date</li>
+                      <li>Required English or French language proficiency (speaking, reading, listening and writing). You must satisfy CLB level 7 for TEER 0 or 1 Jobs and CLB 5 for TEER 2 or 3 jobs.</li>
+                      <li>This class is particularly relevant to international students who studied in Canada for two or more years and completed at least one year of post-graduation work.</li>
                     </ul>
-                    <p>The postsecondary students and temporary workers having the required work experience as above will be eligible to apply under this class. This class is of interest to any international student who has come to Canada to study for a period of two years and work in Canada for at least one year after graduation.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Investors, Entrepreneurs & Self-Employed */}
+              {/* 5. Investors, Entrepreneurs & Self-Employed */}
               <article id="iese" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Investors, Entrepreneurs & Self-Employed</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>The business immigration programme seeks to bring experienced business people to Canada who can make a significant contribution to the thriving Canadian economy. This is a Federal programme which is independent from the Provincial Nominee Programme. Currently there are two streams under which people can immigrate to Canada as Permanent Residents:</p>
-                    <ul>
-                      <li>Start-up Visa</li>
-                      <li>Self Employed Persons</li>
-                    </ul>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">7. Investors, Entrepreneurs & Self-Employed</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Canada's business immigration programme attracts experienced business persons capable of making significant contributions to the economy. Two streams are currently available:</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Start-up Visa</h3>
-                    <p>The Start-up programme links immigrant entrepreneurs with experienced private sector organizations who are experts in evaluating business proposals and providing venture capital. To be eligible to receive a Start-up visa the applicant must have a business venture or idea that is supported by one of the following designated organizations:</p>
-                    <ul>
+                    <p>Links immigrant entrepreneurs with private-sector organizations providing venture capital or incubation. Eligibility requires a business venture supported by one of the following designated organizations:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
                       <li>Designated Venture Capital Fund</li>
                       <li>Designated Angel Investor Group</li>
                       <li>Designated Business Incubators</li>
                     </ul>
-                    <p>In addition the applicant must meet the language requirement, one year of post secondary education and sufficient settlement funds.</p>
+                    <p>Additionally, applicants must meet language requirements, hold at least one year of post-secondary education, and demonstrate sufficient settlement funds.</p>
 
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Self Employed Persons</h3>
-                    <p>The self employed persons programme seeks to attract people who will become self employed in Canada. They must have either:</p>
-                    <ul>
-                      <li>Relevant experience in cultural activities or athletics and be able to make a significant contribution to the cultural or athletic life in Canada</li>
-                      <li>Experience in Farm Management and be able to buy and manage a farm in Canada</li>
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Self-Employed Persons</h3>
+                    <p>Targets individuals who will be self-employed in Canada. Applicants must have:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Relevant experience in cultural activities or athletics and the ability to make a significant contribution to Canadian cultural or athletic life, OR</li>
+                      <li>Farm management experience with the intent to buy and manage a farm in Canada</li>
                     </ul>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Family Sponsorship */}
+              {/* 6. Family Sponsorship */}
               <article id="fs" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Family Sponsorship</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Canadian citizens and Permanent Residents can sponsor the following classes of persons under the Family Sponsorship programme:</p>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">8. Family Sponsorship</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Canadian citizens and Permanent Residents may sponsor the following classes of persons:</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Spouse, Common-Law Partner or Conjugal Partner</h3>
-                    <p>A spouse means husband or wife who are legally married. If the marriage took place outside Canada, it should be valid both under the Laws of the jurisdiction where it took place and under the Canadian law. Common-law partner means, in relation to a person, an individual who is cohabiting with the person in a conjugal relationship, having cohabited for a period of one year. Conjugal Partner means, in relation to a sponsor, a foreign national residing outside Canada who is in a conjugal relationship with the sponsor and has been in that relationship for a period of at least one year.</p>
+                    <p>Covers legally married spouses (marriage must be valid under both the jurisdiction where it occurred and the Canadian law), common-law partners (cohabiting in a conjugal relationship for at least one year), and conjugal partners residing outside Canada in a relationship of at least one year's duration.</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Dependent Children</h3>
-                    <p>A sponsor's dependent children includes biological children or legally adopted children who are in one of the following situations of dependency:</p>
-                    <ul>
-                      <li>Is less than 19 years of age and is not a spouse or common-law partner, OR</li>
-                      <li>Is 19 years of age or older and has depended substantially on the financial support of the parent since before the age of 19 and is unable to be financially self-supporting due to a physical or mental condition</li>
-                    </ul>
+                    <p>Biological or legally adopted children who are either under 22 years of age and not a spouse or common-law partner, or 22 years and older but unable to be financially self-supporting due to a physical or mental condition since before age 22.</p>
 
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Parents and Grand Parents Scheme</h3>
-                    <p>This programme allows Canadian permanent residents and citizens to reunite with their parents and grandparents by way of sponsorship. They can be sponsored to become permanent residents. The parent and grandparents continue to be eligible for a super visa. The permanent residents and citizens have to provide proof that they have financial resources to meet the minimum necessary income (MNI) per household.</p>
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Parents and Grandparents</h3>
+                    <p>Canadian citizens and permanent residents can sponsor parents and grandparents for permanent residency. Sponsors must demonstrate financial resources meeting the Minimum Necessary Income (MNI) threshold for their household size. Parents and grandparents also remain eligible for the Super Visa.</p>
+                    <p>As per the new immigration guidelines potential sponsors are required to submit an interest to sponsor form when IRCC open the applications from the sponsors.</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Orphans</h3>
-                    <p>An orphaned brother, sister, nephew, niece or grandchild who are unmarried and under the age of 18 can be sponsored.</p>
+                    <p>An orphaned brother, sister, nephew, niece, or grandchild who is unmarried and under 18 years of age.</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Adopted Persons</h3>
-                    <p>Persons under 18 years whom the sponsor intend to adopt in Canada.</p>
+                    <p>Persons under 18 years of age whom the sponsor intends to adopt in Canada.</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Relative of the Sponsor</h3>
-                    <p>A relative of the sponsor (anyone connected by blood or adoption) regardless of age if the Sponsor does not have any relative in Canada who is a Canadian or Permanent Resident.</p>
+                    <p>Any relative of the sponsor (by blood or adoption) regardless of age, provided the sponsor has no other relative in Canada who is a Canadian citizen or Permanent Resident.</p>
 
-                    <p className="mt-6">Sponsorship application procedure is complex. Both the sponsor and the sponsored persons must meet certain requirements stipulated in the Act and the regulations in order to qualify. The Sponsor must give an undertaking to provide financial assistance to the sponsored person to establish himself financially in Canada.</p>
+                    <p className="mt-6 text-sm text-gray-500 italic">
+                      Note: Both the sponsor and sponsored person must meet eligibility criteria under IRPA. The sponsor must provide an undertaking of financial support.
+                    </p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Provincial Nominees */}
+              {/* 7. Provincial Nominee Programme */}
               <article id="pn" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Provincial Nominee Programme</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Canada has entered into bi-lateral agreements with all provinces (except Quebec) and with the Yukon and Northwest Territories to allow the provinces to nominate individuals to become permanent residents based on the provinces' assessment of the nominees' ability to contribute to the economic growth and development of that province.</p>
-                    <p>These nominees must have the skills, education and work experience or adequate capital to set up a business, in order to contribute to the economy of that province or territory. They must agree to settle down in the province from whom they receive the nomination.</p>
-                    <p>To apply under the Provincial Nominee Program, the person must:</p>
-                    <ul>
-                      <li>Be nominated by a specific Canadian province or territory, then</li>
-                      <li>Apply to Citizenship and Immigration Canada (CIC) to become a permanent resident of Canada</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">9. Provincial Nominee Programme (PNP)</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>The Provincial Nominee Program (PNP) lets provinces and Territories (except Quebec and Nunavut) nominate people who:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>have the skills, education and work experience to help their economy (like business people and skilled workers)</li>
+                      <li>want to live in that province or territory</li>
+                      <li>want to become permanent residents of Canada</li>
                     </ul>
-                    <p>Each participating province and territory has its own nomination guidelines.</p>
+                    <p>Each province and territory has its own requirements. They also set the number of people they can nominate each year.</p>
+                    <p>There are 2 ways to apply for permanent residence through the PNP. The option you use depends on the province or territory you choose to immigrate to. The province or territory will also let you know whether you must apply through the Express Entry process or through the non-Express Entry process.</p>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Apply through Express Entry</h3>
+                    <p>This option applies to you if you qualify for both the province or territory’s PNP stream and a federal program under Express Entry. If you’re nominated, create your Express Entry profile. You’ll get 600 extra points, which helps you get invited to apply for permanent residence.</p>
+
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Apply through the non-Express Entry process</h3>
+                    <p>This option applies to you if you qualify for the province or territory’s PNP stream, but don’t qualify for the federal program under Express Entry.</p>
                   </div>
                 </AnimatedSection>
               </article>
 
-              {/* Refugees */}
+              {/* 8. Refugees & Persons In Need Of Protection */}
               <article id="refugees" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Refugees & Persons In Need Of Protection</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Canada grants protection to convention refugees and persons in need of protection under a number of United Nations conventions to which it is a signatory. These include the 1951 Convention Relating to the Status of Refugees and 1967 protocol (1951 Refugee Convention), 1984 Convention Against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment.</p>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">10. Refugees & Persons In Need Of Protection</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Canada grants protection under UN conventions including the 1951 Convention Relating to the Status of Refugees, 1967 Protocol, and the 1984 Convention against Torture.</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Convention Refugee</h3>
-                    <p>Convention Refugee is a person who, by reasons of a well founded fear of persecution for reasons of race, religion, nationality, membership in a particular social group or political opinion, is outside his country of nationality and is unable or, by reason of that fear, unwilling to avail himself of the protection of that country.</p>
+                    <p>A person outside their country of nationality with a well-founded fear of persecution on grounds of race, religion, nationality, membership in a particular social group, or political opinion, who is unable or unwilling to seek protection from that country.</p>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Person in Need of Protection</h3>
-                    <p>A person in need of protection is a person in Canada whose removal to his country of nationality would subject them personally to a danger believed on substantial ground to exist, of torture or to a risk to his life or to a risk of cruel and unusual treatment or punishment.</p>
+                    <p>A person in Canada whose removal to their country of nationality would subject them personally to a risk of torture, risk to life, or risk of cruel and unusual treatment or punishment.</p>
+                  </div>
+                </AnimatedSection>
+              </article>
 
-                    <p>If you are faced with an unfortunate situation requiring you to claim protection as a convention refugee or a person in need of protection, we as Consultants will assist you in every way possible for you to make a refugee claim with the Immigration and Refugee Board (IRB) and appear for you at the hearing of the Refugee Protection Division.</p>
+              {/* Refugee Claims Process */}
+              <article id="rcp" className="scroll-mt-28 mb-16">
+                <AnimatedSection>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Refugee Claims Process</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Refugee claims may be initiated at a port of entry with CBSA or at an inland IRCC office. An officer determines eligibility for referral to the Refugee Protection Division (RPD) of the IRB.</p>
+                    <p>Claims ineligible for IRB referral include persons who:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Previously had a claim rejected, found ineligible, withdrawn, or abandoned in Canada</li>
+                      <li>Have been granted refugee status in another country</li>
+                      <li>Are barred under the Safe Third Country Agreement</li>
+                      <li>Are inadmissible on security or certain criminality grounds</li>
+                    </ul>
+                    <p>The refugee hearing must be scheduled within 60 days of referral. Upon a positive determination, the claimant is eligible to apply for permanent residence.</p>
+                    <p>Recent changes under Bill C-12 strictly enforce new eligibility restrictions, such as a 1-year deadline from your first entry into Canada to file an inland claim, and a 14-day deadline if you crossed the Canada-U.S. border irregularly.</p>
+                    <p>The Claimants disqualified by these new rules cannot have an oral IRB hearing. Instead, they are diverted to the Pre-Removal Risk Assessment (PRRA) process to evaluate if they face a risk of torture or persecution before removal.</p>
+                    <p>LanCan consultants assist clients in making refugee claims with the Immigration and Refugee Board (IRB) and provide representation at Refugee Protection Division hearings.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Citizenship */}
+              {/* 9. Citizenship */}
               <article id="citizenship" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Citizenship</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Permanent Residents who are 18 years of age or older are eligible to apply for Canadian Citizenship if they:</p>
-                    <ul>
-                      <li>Have been physically present in Canada as a permanent resident for at least 1460 days during the six years immediately before the date of application for citizenship. They must also be physically present for at least 183 days during each of four calendar years that are fully or partially within the six years immediately before the date of application.</li>
-                      <li>Have met the personal income tax filing obligations in four taxation years that are fully or partially within the six years immediately before the date they apply.</li>
-                      <li>Declare that they intend to reside in Canada during the citizenship application process.</li>
-                      <li>Show that they have adequate knowledge of either English or French to take part in short, everyday conversations about common topics.</li>
-                      <li>Understand the rights, responsibilities and privileges of citizenship, such as voting in elections and obeying the law. Those between 14 to 64 years of age will need to take a citizenship test based on the study guide "Discover Canada: The Rights and Responsibilities of Citizenship."</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">11. Citizenship</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Permanent Residents aged 18 or older are eligible to apply for Canadian Citizenship if they meet all of the following:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>To apply for Canadian citizenship, you must be a permanent resident and physically present in Canada for at least 1,095 days (3 years) within the 5 years immediately before the date you sign your application. Time spent as a temporary resident or protected person before becoming a permanent resident may count as half-days, up to a maximum of 365 days</li>
+                      <li>Personal income tax filing compliance in four taxation years within the five years preceding the application</li>
+                      <li>Adequate knowledge of English or French sufficient for short, everyday conversations</li>
+                      <li>Understanding of the rights, responsibilities, and privileges of citizenship (ages 14–64 must pass a citizenship test based on 'Discover Canada')</li>
                     </ul>
-                    <p>If an applicant has committed a crime in or outside Canada, he may not be eligible to become a Canadian citizen.</p>
+                    <p>A prior criminal conviction in or outside Canada may render an applicant ineligible.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* PR Card Renewal */}
+              {/* 10. PR Card Renewal */}
               <article id="pcr" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">PR Card Renewal</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>PR card is a status document. It is a new requirement under the Law to provide PRs and protected persons with a document indicating their status. PR card is normally valid for five years. IRPA imposes a residency obligation on the Permanent Residents.</p>
-                    <p>PR complies with residency obligation with respect to a 5 year period if he can demonstrate that he was physically present in Canada 730 days. The period outside Canada is considered as present in Canada if the PR is outside Canada:</p>
-                    <ul>
-                      <li>Accompanying a Canadian citizen who is Spouse, CLP or a child accompanying parent</li>
-                      <li>Employed full time by Canadian business/public service/provincial public service</li>
-                      <li>Is an accompanying spouse, CLP or child of a permanent resident who is employed by Canadian Business/public service/provincial public service</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">12. PR Card Renewal</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>The Permanent Resident (PR) card is a status document required under IRPA, normally valid for five years. IRPA imposes a residency obligation: a PR must be physically present in Canada for at least 730 days during any five-year period.</p>
+                    <p>Time outside Canada is credited as presence in Canada if the PR is:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Accompanying a Canadian citizen who is their spouse, common-law partner, or is a child accompanying a parent</li>
+                      <li>Employed full-time by a Canadian business, the federal public service, or a provincial public service</li>
+                      <li>An accompanying spouse, CLP, or child of a PR employed by a Canadian business or public service</li>
                     </ul>
-                  </div>
-                  <EmailCTA />
-                </AnimatedSection>
-              </article>
-
-              {/* ─────── VISIT & STUDY ─────── */}
-              <div className="mt-20 mb-8">
-                <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Visit & Study</span>
-              </div>
-
-              {/* Visit Canada */}
-              <article id="vc" className="scroll-mt-28 mb-16">
-                <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Visit Canada</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-6 mb-4">Visit as a Tourist</h3>
-                    <p>Citizens of certain countries need a visa to visit Canada. This is known as Temporary Resident Visa. Application for such visa must be submitted to the nearest Canadian embassy. Anyone visiting Canada has to convince the immigration officer that he has ties such as a job, financial asset, or family that will take him back to his home country. He must also convince the officer that he will leave Canada at the end of his visit.</p>
-
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Business Visitor</h3>
-                    <p>Business visitor is a person who visits Canada to look for ways to grow his business, invest or advance his business relationship with Canadian companies. He must show that he does not plan to enter the labour market in Canada and his principal place of business and source of income and profit is outside Canada. A letter of invitation from a potential business partner in Canada is required.</p>
-
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Parent and Grandparent Super Visa</h3>
-                    <p>Parents and Grandparents of Canadian Citizens and Permanent Residents are eligible to apply for a Parent and Grandparent Super Visa. This visa is valid for a period of ten years and will let the applicant visit for up to two years without renewing the status. The applicant must prove that:</p>
-                    <ul>
-                      <li>Child or grandchild in Canada is either a citizen or permanent resident and meets the minimum requirement of income threshold</li>
-                      <li>Child or grand child will provide financial support to the applicant</li>
-                      <li>Has a valid Canadian medical insurance coverage for at least one year</li>
-                      <li>Passed an immigration medical exam</li>
-                    </ul>
-                  </div>
-                  <EmailCTA />
-                </AnimatedSection>
-              </article>
-
-              {/* Study in Canada */}
-              <article id="sic" className="scroll-mt-28 mb-16">
-                <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Study in Canada</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>To study in Canada as a student you will need a Study Permit. Study Permit is a written authorization issued to foreign students authorizing them to engage in studies in Canada. There are over 125 Universities and Colleges across Canada offering more than 10,000 programmes of study at Undergraduate, Master's and PhD level. In addition there are over 138 Community Colleges and Institutions offering Post-Graduate and Bachelor's degrees.</p>
-                    <p>To obtain a study permit, the applicant must:</p>
-                    <ul>
-                      <li>Have received acceptance from a school, college, university or other institution in Canada for a programme of study</li>
-                      <li>Have sufficient money to pay for tuition fees and living expenses during the programme of study</li>
-                      <li>Satisfy the immigration officer that he will leave Canada at the end of the authorized period of study</li>
-                      <li>Be in good health</li>
-                    </ul>
-
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">On Campus Employment</h3>
-                    <p>Students of a full time post secondary programme are eligible to work without a work permit on the Campus of the university or college at which they are registered as a full time student.</p>
-
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Off Campus Work</h3>
-                    <p>Study permit holders for full time studies in Canada in a Designated Learning Institution are eligible to work off campus without a work permit. They may work 20 hours per week during regular academic sessions and work full time during scheduled breaks such as winter, summer holidays and spring breaks.</p>
-
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Post Graduate Work Permit Programme (PGWP)</h3>
-                    <p>This programme allows students who have graduated from a participating post secondary institution to apply for a work permit to work in Canada to gain Canadian work experience. No need for a LMO. The work permit is valid for a maximum of 3 years. International students graduated from any Canadian Post Secondary Institution with Canadian experience are eligible to apply for Permanent Resident Status under various Provincial Nominee Programmes.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
@@ -438,47 +476,47 @@ export default function ServicesPage() {
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Work in Canada</span>
               </div>
 
-              {/* Work Permits */}
+              {/* 13. Work Permits */}
               <article id="wic" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Work in Canada</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>There are certain jobs in Canada which are exempted from the requirement of a work permit. All other jobs in Canada require a work permit and a positive Labour Market Opinion. The employer who is willing to employ a foreign national needs to get a LMO from the Government of Canada.</p>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">13. Work Permits</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Most jobs in Canada require a work permit and a positive Labour Market Impact Assessment (LMIA). The employer must obtain an LMIA from Employment and Social Development Canada (ESDC) prior to hiring a foreign national for most positions.</p>
 
-                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Applying for a Work Permit</h3>
-                    <p>A person who wants to work in Canada needs normally to apply for a work permit from outside Canada. The most important documents among other documents are:</p>
-                    <ul>
-                      <li>Job offer or contract from the prospective employer including description of job duties, salary and anticipated job duration</li>
-                      <li>Copy of Labour Market Opinion from the government of Canada</li>
-                      <li>Evidence that you meet the requirement of the job, such as educational qualifications, experience and Canadian certificates</li>
+                    <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Applying from Outside Canada</h3>
+                    <p>Key documents required for a work permit application:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Job offer or employment contract detailing duties, salary, and anticipated duration</li>
+                      <li>Copy of the positive LMIA from the Government of Canada</li>
+                      <li>Evidence of meeting job requirements: educational qualifications, relevant experience, Canadian certifications if applicable</li>
                     </ul>
 
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-8 mb-4">Applying from Inside Canada</h3>
-                    <p>A person who is eligible to apply from inside Canada must:</p>
-                    <ul>
-                      <li>Be currently in Canada and have a valid study/work permit or the spouse possessing a study/work permit</li>
-                      <li>Have graduated from a Canadian post secondary institution</li>
-                      <li>Have a temporary resident permit valid for six months</li>
-                      <li>Have applied for permanent residence within Canada</li>
+                    <p>A person may apply for a work permit from within Canada if they:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Are currently in Canada with a valid study/work permit (or are the spouse of such a permit holder)</li>
+                      <li>Have graduated from a Canadian post-secondary institution</li>
+                      <li>Hold a Temporary Resident Permit valid for at least six months</li>
+                      <li>Have an in-Canada permanent residence application on file</li>
                     </ul>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Live-in Caregivers */}
+              {/* 14. Live-in Caregivers */}
               <article id="lic" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Live-in Caregivers</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Live-in Caregivers are individuals who are qualified to provide care for children, elderly persons or persons with disabilities in private homes without supervision. Live-in Caregivers must live in the private home where they work in Canada.</p>
-                    <p>Live-in Caregivers are eligible to apply for permanent residence status if they work at least 24 months or a total of 3900 hours in a minimum of 22 months within the 4 years immediately following the entry. The Live-in Caregiver applicant needs:</p>
-                    <ul>
-                      <li>A positive Labour Market Opinion (LMO) from an employer in Canada</li>
-                      <li>A written contract with the employer signed by both the applicant and employer</li>
-                      <li>Successful completion of education equivalent to Canadian Secondary School education</li>
-                      <li>At least six months training or one year of full time paid work experience as a caregiver in a related field</li>
-                      <li>Good knowledge of English or French</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">14. Live-in Caregivers</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Live-in Caregivers provide care for children, elderly persons, or persons with disabilities in private homes and must reside in the home where they work.</p>
+                    <p>Eligibility for permanent residence: minimum 24 months or 3,900 hours of live-in caregiver employment within 4 years following entry. Requirements:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Positive LMIA from a Canadian employer</li>
+                      <li>Written employment contract signed by both parties</li>
+                      <li>Education equivalent to Canadian secondary school completion</li>
+                      <li>At least six months of full-time training or one year of paid work experience as a caregiver in a related field</li>
+                      <li>Proficiency in English or French</li>
                     </ul>
                   </div>
                   <EmailCTA />
@@ -490,108 +528,95 @@ export default function ServicesPage() {
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Other Services</span>
               </div>
 
-              {/* Admissibility Hearings */}
+              {/* 15. Admissibility Hearings */}
               <article id="ah" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Admissibility Hearings</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Admissibility hearing means a hearing held under section 44(2) of the IRPA concerning a person who is alleged to be inadmissible to Canada or alleged to have violated the provisions of the Act. A permanent resident or foreign national may be inadmissible to Canada due to a variety of reasons such as security, violation of human rights, serious criminality, organized criminality, health grounds, financial reasons, misrepresentation, cessation of refugee protection, non compliance with the Act and inadmissible family member.</p>
-                    <p>Admissibility hearing is conducted by a member of the Immigration Division of the Immigration and Refugee Board (IRB). Such a hearing may result in a removal order being issued against the person who is deemed to be inadmissible. The removal order may be a Departure Order, Exclusion Order or Deportation Order depending on the nature of inadmissibility.</p>
-                    <p>In the event of an unfortunate situation where you have been issued with a report requiring you to appear at an admissibility hearing it is important for you to contact an Immigration Consultant or a Lawyer to represent you at such a hearing. We as experienced Immigration Consultants will be happy to appear for you and ensure that your rights under the law are protected.</p>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">15. Admissibility Hearings</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>An admissibility hearing under section 44(2) of IRPA addresses allegations of inadmissibility due to security concerns, human rights violations, serious or organized criminality, health grounds, financial reasons, misrepresentation, cessation of refugee protection, non-compliance with the Act, or inadmissible family members.</p>
+                    <p>Hearings are conducted by a member of the Immigration Division of the IRB and may result in a Departure Order, Exclusion Order, or Deportation Order. LanCan consultants provide representation at admissibility hearings to protect clients' legal rights.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Detention Reviews */}
+              {/* 16. Detention Reviews */}
               <article id="dr" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Detention Reviews</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>An Immigration officer may arrest without a warrant and detain a foreign national if the officer has reasonable grounds to believe that the foreign national is inadmissible and is a danger to the public, or is unlikely to appear for examination or removal from Canada, or has failed to establish his identity.</p>
-                    <p>The purpose of the detention review is to determine whether there are valid reasons for the detention and if the member finds that reasons are not valid he must release the person with or without conditions. The first detention review takes place within 24 hours of detention and the second review within 7 days of the first review and thereafter periodically every 30 days.</p>
-                    <p>In the event of detention, it is important to contact an Immigration Consultant or a Lawyer to represent you at any of the detention reviews to protect your legal rights.</p>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">16. Detention Reviews</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>An immigration officer may arrest and detain a foreign national without a warrant if there are reasonable grounds to believe the individual is inadmissible and a danger to the public, unlikely to appear for examination or removal, or has failed to establish identity.</p>
+                    <p>Detention review timeline:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>First review: within 24 hours of detention</li>
+                      <li>Second review: within 7 days of the first review</li>
+                      <li>Subsequent reviews: every 30 days</li>
+                    </ul>
+                    <p>The reviewing member determines whether valid grounds for detention exist and must order release (with or without conditions) if grounds are not established. LanCan consultants provide representation at all detention review hearings.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Immigration Appeal Division */}
+              {/* 17. Immigration Appeal Division */}
               <article id="iad" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Immigration Appeal Division</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Immigration Appeal Division has jurisdiction to review appeals in the following circumstances:</p>
-                    <ul>
-                      <li>Sponsor against the refusal of a sponsorship application</li>
-                      <li>Foreign national who hold a PR visa against a removal order made at an examination or admissibility hearing</li>
-                      <li>Permanent resident or protected person against a removal order</li>
-                      <li>Permanent resident against a decision made outside Canada on the non compliance of residency obligation</li>
-                      <li>The minister against a decision of an immigration division</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">17. Immigration Appeal Division (IAD)</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>The IAD has jurisdiction to review appeals in the following circumstances:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Sponsor appealing a refused sponsorship application</li>
+                      <li>Foreign national holding a PR visa appealing a removal order issued at examination or admissibility hearing</li>
+                      <li>Permanent resident or protected person appealing a removal order</li>
+                      <li>Permanent resident appealing a decision made outside Canada regarding non-compliance with residency obligations</li>
+                      <li>The Minister appealing a decision of an Immigration Division</li>
                     </ul>
-                    <p>Immigration Appeal Division has equitable jurisdiction which may warrant considering an appeal favorably on humanitarian and compassionate considerations even if the decision is valid in law.</p>
+                    <p>The IAD holds equitable jurisdiction and may grant an appeal on humanitarian and compassionate grounds even where the original decision was legally valid.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* Refugee Claims Process */}
-              <article id="rcp" className="scroll-mt-28 mb-16">
-                <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Refugee Claims Process</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>A claim for refugee protection can be made either at a port of entry with the CBSA or at an inland office of the CIC. CBSA officer or CIC officer will determine whether the person making the claim is eligible for referral to Refugee Protection Division of the Immigration and Refugee Board (IRB).</p>
-                    <p>Claims are ineligible for referral to IRB if the person:</p>
-                    <ul>
-                      <li>Has made a previous claim in Canada that was rejected by the IRB</li>
-                      <li>Has made a previous claim that was found to be ineligible</li>
-                      <li>Has abandoned or withdrawn a previous refugee claim</li>
-                      <li>Has got refugee status in another country</li>
-                      <li>Is barred under the Safe Third Country Agreement</li>
-                      <li>Is inadmissible on security or certain criminality grounds</li>
-                    </ul>
-                    <p>Date for the refugee hearing has to be fixed within 60 days from the date of referral. At the conclusion of the hearing, the Refugee Protection Division will determine whether the claimant is eligible for convention refugee status or whether he is a person in need of protection. Once recognized, such person is eligible to receive permanent residence status.</p>
-                  </div>
-                  <EmailCTA />
-                </AnimatedSection>
-              </article>
-
-              {/* Refugee Appeal Division */}
+              {/* 18. Refugee Appeal Division */}
               <article id="rad" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Refugee Appeal Division</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>A failed refugee claimant has a right to make an appeal to the Refugee Appeal Division against the decision of the Refugee Protection Division. The appeal must be based on a question of Law, of facts or on a question of mixed law and facts.</p>
-                    <p>The time limit for filing a notice of appeal is 15 days after the appellant receives the reasons for the decision. Time limit for perfecting an appeal is 30 days.</p>
-                    <p>Following persons cannot appeal to RAD:</p>
-                    <ul>
-                      <li>Person from a Designated Country of Origin (DCO)</li>
-                      <li>Person declared as a Designated Foreign National (DFN)</li>
-                      <li>Person whose claim was referred as an exception to the Safe Third Country Agreement</li>
-                      <li>Person whose claim has been decided as manifestly unfounded or having no credible basis</li>
-                      <li>Person whose claim was withdrawn or declared abandoned</li>
-                      <li>Person whose claim was referred to the IRB before the coming into force of the new refugee protection provisions</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">18. Refugee Appeal Division (RAD)</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Failed refugee claimants may appeal RPD decisions to the RAD on questions of law, fact, or mixed law and fact.</p>
+                    <p>Filing deadlines:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Notice of appeal: within 15 days of receiving RPD reasons</li>
+                      <li>Perfecting the appeal: within 30 days</li>
+                    </ul>
+                    <p>The following persons cannot appeal to the RAD:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Persons from a Designated Country of Origin (DCO)</li>
+                      <li>Designated Foreign Nationals (DFN)</li>
+                      <li>Persons whose claim was referred as an exception to the Safe Third Country Agreement</li>
+                      <li>Persons whose claim was determined to be manifestly unfounded or having no credible basis</li>
+                      <li>Persons whose claim was withdrawn or abandoned</li>
+                      <li>Persons whose claim was referred to the IRB before the new refugee protection provisions came into force</li>
                     </ul>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>
               </article>
 
-              {/* PRRA */}
+              {/* 19. Pre-Removal Risk Assessment */}
               <article id="prra" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Pre-Risk Removal Assessment (PRRA)</h2>
-                  <div className="prose prose-gray max-w-none">
-                    <p>Persons who are subject to removal orders can apply for PRRA. The purpose of PRRA is to determine whether the evidence presented indicates that there is more than a mere possibility that the applicant will be at a risk of persecution, torture, or risk to life if removed to their country of nationality.</p>
-                    <p>Who can apply for PRRA:</p>
-                    <ul>
-                      <li>Persons whose refugee claims have been rejected (including those withdrawn and abandoned)</li>
-                      <li>Persons whose refugee claim is ineligible for referral to RPD (except those ineligible due to Safe Third Country Rule)</li>
-                      <li>Individuals who left Canada following a rejected refugee claim or PRRA and more than six months have passed since departure</li>
-                      <li>Previous PRRA applicants who are still in Canada</li>
-                      <li>Other individuals who never previously sought refugee protection and now facing removal</li>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">19. Pre-Removal Risk Assessment (PRRA)</h2>
+                  <div className="space-y-4 text-gray-600 leading-relaxed">
+                    <p>Persons subject to removal orders may apply for PRRA to determine whether evidence indicates more than a mere possibility of persecution, torture, or risk to life upon removal to their country of nationality.</p>
+                    <p>Eligible PRRA applicants include:</p>
+                    <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
+                      <li>Persons whose refugee claims were rejected (including withdrawn and abandoned)</li>
+                      <li>Persons whose refugee claim was ineligible for referral to RPD (except those barred under the Safe Third Country Rule)</li>
+                      <li>Individuals who left Canada following a rejected claim or PRRA and returned after more than six months</li>
+                      <li>Previous PRRA applicants still in Canada</li>
+                      <li>Other individuals facing removal who never previously sought refugee protection</li>
                     </ul>
-                    <p>PRRA application has to be submitted within 15 days from the receipt of notification.</p>
+                    <p>PRRA applications must be submitted within 15 days of receiving notification.</p>
                   </div>
                   <EmailCTA />
                 </AnimatedSection>

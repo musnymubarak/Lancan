@@ -11,6 +11,13 @@ const navLinks = [
     path: '/services',
     dropdown: [
       {
+        category: 'Visit & Study',
+        items: [
+          { name: 'Visit Canada', hash: '#vc' },
+          { name: 'Study in Canada', hash: '#sic' },
+        ],
+      },
+      {
         category: 'Immigrate',
         items: [
           { name: 'Express Entry', hash: '#express' },
@@ -23,13 +30,6 @@ const navLinks = [
           { name: 'Refugees', hash: '#refugees' },
           { name: 'Citizenship', hash: '#citizenship' },
           { name: 'PR Card Renewal', hash: '#pcr' },
-        ],
-      },
-      {
-        category: 'Visit & Study',
-        items: [
-          { name: 'Visit Canada', hash: '#vc' },
-          { name: 'Study in Canada', hash: '#sic' },
         ],
       },
       {
@@ -102,7 +102,13 @@ export default function Navbar() {
         <div className="page-container flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={logoUrl} alt="LanCan Immigration" className="h-[50px] object-contain group-hover:scale-105 transition-transform bg-white/90 rounded-lg p-1" />
+            <img
+              src={logoUrl}
+              alt="LanCan Immigration"
+              className={`h-[50px] object-contain group-hover:scale-105 transition-transform ${
+                isScrolled ? '' : 'brightness-0 invert'
+              }`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -133,7 +139,7 @@ export default function Navbar() {
                 {/* Mega Dropdown */}
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
-                    <div className="glass-light rounded-3xl shadow-premium border border-white/20 p-8 min-w-[650px] grid grid-cols-2 gap-8 ring-1 ring-black/5 backdrop-blur-3xl">
+                    <div className="bg-white rounded-3xl shadow-premium border border-gray-100 p-8 min-w-[650px] grid grid-cols-2 gap-8 ring-1 ring-black/5">
                       {link.dropdown.map((category) => (
                         <div key={category.category}>
                           <h4 className="text-xs font-bold uppercase tracking-widest text-cyan-600 mb-3">
