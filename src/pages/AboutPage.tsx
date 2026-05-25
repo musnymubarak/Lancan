@@ -3,6 +3,7 @@ import { Award, Scale, Globe, BookOpen, ArrowRight, CheckCircle2 } from 'lucide-
 import AnimatedSection from '../components/AnimatedSection';
 import ciccLogoUrl from '../images/cicc-logo-transparent.png';
 import canadaImg from '../images/canada.jpeg';
+import founderImg from '../images/founder_hd.png';
 
 export default function AboutPage() {
   return (
@@ -123,37 +124,49 @@ export default function AboutPage() {
       {/* ═══════════════ FOUNDER PROFILE ═══════════════ */}
       <section className="section-padding bg-white">
         <div className="page-container">
-          <div className="grid lg:grid-cols-5 gap-12 items-start">
+          <div className="grid lg:grid-cols-5 gap-12">
             {/* Sidebar */}
-            <AnimatedSection className="lg:col-span-2" direction="right">
-              <div className="bg-blue-950 rounded-2xl p-8 text-white sticky top-32">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-cyan-500 flex items-center justify-center">
-                  <span className="text-3xl font-heading font-bold text-white">CA</span>
-                </div>
-                <h3 className="text-xl font-heading font-bold text-center mb-2">Chandralal Attanapola</h3>
-                <p className="text-sm text-cyan-400 text-center mb-6">LL.B, LL.M, RCIC</p>
-
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-white/70">Managing Director, Lancan Immigration Consultants</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-white/70">CICC of #R510775</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-white/70">Attorney-at-Law, Supreme Court of Sri Lanka</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
-                    <span className="text-white/70">30+ Years in Law & Immigration</span>
-                  </div>
+            <AnimatedSection className="lg:col-span-2 h-full" direction="right">
+              <div className="flex flex-col h-full space-y-6">
+                <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 bg-white shrink-0">
+                  <img
+                    src={founderImg}
+                    alt="Chandralal Attanapola"
+                    className="w-full h-[380px] object-cover object-center"
+                  />
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/10 flex justify-center">
-                  <img src={ciccLogoUrl} alt="CICC Certified Logo" className="h-[100px] object-contain" />
+                <div className="bg-blue-950 rounded-2xl p-8 text-white flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-cyan-500 flex items-center justify-center">
+                      <span className="text-3xl font-heading font-bold text-white">CA</span>
+                    </div>
+                    <h3 className="text-xl font-heading font-bold text-center mb-2">Chandralal Attanapola</h3>
+                    <p className="text-sm text-cyan-400 text-center mb-6">LL.B, LL.M, RCIC</p>
+
+                    <div className="space-y-3 text-sm">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                        <span className="text-white/70">Managing Director, Lancan Immigration Consultants</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                        <span className="text-white/70">CICC of #R510775</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                        <span className="text-white/70">Attorney-at-Law, Supreme Court of Sri Lanka</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className="w-4 h-4 text-cyan-500 shrink-0" />
+                        <span className="text-white/70">30+ Years in Law & Immigration</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 pt-6 border-t border-white/10 flex justify-center">
+                    <img src={ciccLogoUrl} alt="CICC Certified Logo" className="h-[100px] object-contain" />
+                  </div>
                 </div>
               </div>
             </AnimatedSection>

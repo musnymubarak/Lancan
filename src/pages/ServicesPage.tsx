@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Mail } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
+import visitStudyImg from '../images/visit_study.png';
+import immigrateImg from '../images/immigrate.png';
+import workCanadaImg from '../images/work_canada.png';
+import otherServicesImg from '../images/other_services.png';
 
 const categories = [
   {
@@ -157,6 +161,11 @@ export default function ServicesPage() {
               {/* ─────── VISIT & STUDY ─────── */}
               <div className="mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Visit & Study</span>
+                <AnimatedSection className="mt-4">
+                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
+                    <img src={visitStudyImg} alt="Visit & Study in Canada" className="w-full h-full object-cover" />
+                  </div>
+                </AnimatedSection>
               </div>
 
               {/* 11. Visit Canada */}
@@ -223,6 +232,11 @@ export default function ServicesPage() {
               {/* ─────── IMMIGRATE ─────── */}
               <div className="mt-20 mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Immigrate to Canada</span>
+                <AnimatedSection className="mt-4">
+                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
+                    <img src={immigrateImg} alt="Immigrate to Canada" className="w-full h-full object-cover" />
+                  </div>
+                </AnimatedSection>
               </div>
 
               {/* 1. Express Entry */}
@@ -474,6 +488,11 @@ export default function ServicesPage() {
               {/* ─────── WORK IN CANADA ─────── */}
               <div className="mt-20 mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Work in Canada</span>
+                <AnimatedSection className="mt-4">
+                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
+                    <img src={workCanadaImg} alt="Work in Canada" className="w-full h-full object-cover" />
+                  </div>
+                </AnimatedSection>
               </div>
 
               {/* 13. Work Permits */}
@@ -526,6 +545,11 @@ export default function ServicesPage() {
               {/* ─────── OTHER SERVICES ─────── */}
               <div className="mt-20 mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Other Services</span>
+                <AnimatedSection className="mt-4">
+                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
+                    <img src={otherServicesImg} alt="Other legal and appeal services" className="w-full h-full object-cover" />
+                  </div>
+                </AnimatedSection>
               </div>
 
               {/* 15. Admissibility Hearings */}
