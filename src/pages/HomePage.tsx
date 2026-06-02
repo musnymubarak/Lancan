@@ -347,7 +347,7 @@ export default function HomePage() {
                 {[
                   {
                     icon: <Award className="w-5 h-5" />,
-                    title: 'RCIC Certified',
+                    title: 'CICC Certified',
                     desc: 'Regulated Canadian Immigration Consultant of ICCRC',
                   },
                   {
