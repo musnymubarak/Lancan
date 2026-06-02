@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Mail } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import visitStudyImg from '../images/visit_study.png';
+import visitCanadaImg from '../images/visit_canada.png';
 import immigrateImg from '../images/immigrate.png';
 import workCanadaImg from '../images/work_canada.png';
 import otherServicesImg from '../images/other_services.png';
@@ -161,17 +162,15 @@ export default function ServicesPage() {
               {/* ─────── VISIT & STUDY ─────── */}
               <div className="mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Visit & Study</span>
-                <AnimatedSection className="mt-4">
-                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
-                    <img src={visitStudyImg} alt="Visit & Study in Canada" className="w-full h-full object-cover" />
-                  </div>
-                </AnimatedSection>
               </div>
 
               {/* 11. Visit Canada */}
               <article id="vc" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">1. Visit Canada</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Visit Canada</h2>
+                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
+                    <img src={visitCanadaImg} alt="Visit Canada" className="w-full h-full object-cover" />
+                  </div>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-6 mb-4">Temporary Resident Visa (Tourist)</h3>
                     <p>Citizens of certain countries require a Temporary Resident Visa to visit Canada. Applications are submitted to the nearest Canadian embassy. Applicants must demonstrate ties to their home country (employment, assets, and family) and the intention to leave Canada at the end of their authorized visit.</p>
@@ -197,7 +196,10 @@ export default function ServicesPage() {
               {/* 12. Study in Canada */}
               <article id="sic" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">2. Study in Canada</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Study in Canada</h2>
+                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
+                    <img src={visitStudyImg} alt="Study in Canada" className="w-full h-full object-cover" />
+                  </div>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>To study in Canada, foreign nationals require a Study Permit — a written authorization to engage in studies at an accredited Canadian institution. Canada hosts over 125 universities and colleges offering 10,000+ programmes, plus 138+ community colleges and institutions with post-graduate and bachelor's degrees.</p>
                     <p>Study permit eligibility requirements:</p>
@@ -242,7 +244,7 @@ export default function ServicesPage() {
               {/* 1. Express Entry */}
               <article id="express" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">3. Express Entry</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Express Entry</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>The Express Entry system is the primary federal mechanism for managing applications under key economic immigration programs. It is not an immigration program itself, but a selection system managing intake for the following:</p>
                     <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
@@ -268,7 +270,7 @@ export default function ServicesPage() {
               {/* 2. Federal Skilled Workers */}
               <article id="fsw" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">4. Federal Skilled Workers</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Federal Skilled Workers</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>To satisfy basic eligibility under the Federal Skilled Worker Programme, the applicant must meet one of the following:</p>
                     <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
@@ -286,7 +288,7 @@ export default function ServicesPage() {
               {/* 3. Federal Skilled Trade Programme */}
               <article id="fstp" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">5. Federal Skilled Trade Programme</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Federal Skilled Trade Programme</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>This programme targets individuals seeking permanent residence based on qualification in a skilled trade.</p>
                     <p>Skilled trades need specialized knowledge and hands-on work experience. You’ll need an apprenticeship for most trades.</p>
@@ -314,7 +316,7 @@ export default function ServicesPage() {
               {/* 4. Canadian Experience Class */}
               <article id="cec" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">6. Canadian Experience Class (CEC)</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Canadian Experience Class (CEC)</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>The CEC provides a pathway for temporary foreign workers and international students with Canadian credentials to transition to permanent resident status. Eligible applicants must have:</p>
                     <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
@@ -331,7 +333,7 @@ export default function ServicesPage() {
               {/* 5. Investors, Entrepreneurs & Self-Employed */}
               <article id="iese" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">7. Investors, Entrepreneurs & Self-Employed</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Investors, Entrepreneurs & Self-Employed</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Canada's business immigration programme attracts experienced business persons capable of making significant contributions to the economy. Two streams are currently available:</p>
 
@@ -358,7 +360,7 @@ export default function ServicesPage() {
               {/* 6. Family Sponsorship */}
               <article id="fs" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">8. Family Sponsorship</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Family Sponsorship</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Canadian citizens and Permanent Residents may sponsor the following classes of persons:</p>
 
@@ -392,7 +394,7 @@ export default function ServicesPage() {
               {/* 7. Provincial Nominee Programme */}
               <article id="pn" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">9. Provincial Nominee Programme (PNP)</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Provincial Nominee Programme (PNP)</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>The Provincial Nominee Program (PNP) lets provinces and Territories (except Quebec and Nunavut) nominate people who:</p>
                     <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
@@ -415,7 +417,7 @@ export default function ServicesPage() {
               {/* 8. Refugees & Persons In Need Of Protection */}
               <article id="refugees" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">10. Refugees & Persons In Need Of Protection</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Refugees & Persons In Need Of Protection</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Canada grants protection under UN conventions including the 1951 Convention Relating to the Status of Refugees, 1967 Protocol, and the 1984 Convention against Torture.</p>
 
@@ -453,7 +455,7 @@ export default function ServicesPage() {
               {/* 9. Citizenship */}
               <article id="citizenship" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">11. Citizenship</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Citizenship</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Permanent Residents aged 18 or older are eligible to apply for Canadian Citizenship if they meet all of the following:</p>
                     <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
@@ -471,7 +473,7 @@ export default function ServicesPage() {
               {/* 10. PR Card Renewal */}
               <article id="pcr" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">12. PR Card Renewal</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">PR Card Renewal</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>The Permanent Resident (PR) card is a status document required under IRPA, normally valid for five years. IRPA imposes a residency obligation: a PR must be physically present in Canada for at least 730 days during any five-year period.</p>
                     <p>Time outside Canada is credited as presence in Canada if the PR is:</p>
@@ -498,7 +500,7 @@ export default function ServicesPage() {
               {/* 13. Work Permits */}
               <article id="wic" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">13. Work Permits</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Work Permits</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Most jobs in Canada require a work permit and a positive Labour Market Impact Assessment (LMIA). The employer must obtain an LMIA from Employment and Social Development Canada (ESDC) prior to hiring a foreign national for most positions.</p>
 
@@ -526,7 +528,7 @@ export default function ServicesPage() {
               {/* 14. Live-in Caregivers */}
               <article id="lic" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">14. Live-in Caregivers</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Live-in Caregivers</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Live-in Caregivers provide care for children, elderly persons, or persons with disabilities in private homes and must reside in the home where they work.</p>
                     <p>Eligibility for permanent residence: minimum 24 months or 3,900 hours of live-in caregiver employment within 4 years following entry. Requirements:</p>
@@ -555,7 +557,7 @@ export default function ServicesPage() {
               {/* 15. Admissibility Hearings */}
               <article id="ah" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">15. Admissibility Hearings</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Admissibility Hearings</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>An admissibility hearing under section 44(2) of IRPA addresses allegations of inadmissibility due to security concerns, human rights violations, serious or organized criminality, health grounds, financial reasons, misrepresentation, cessation of refugee protection, non-compliance with the Act, or inadmissible family members.</p>
                     <p>Hearings are conducted by a member of the Immigration Division of the IRB and may result in a Departure Order, Exclusion Order, or Deportation Order. LanCan consultants provide representation at admissibility hearings to protect clients' legal rights.</p>
@@ -567,7 +569,7 @@ export default function ServicesPage() {
               {/* 16. Detention Reviews */}
               <article id="dr" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">16. Detention Reviews</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Detention Reviews</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>An immigration officer may arrest and detain a foreign national without a warrant if there are reasonable grounds to believe the individual is inadmissible and a danger to the public, unlikely to appear for examination or removal, or has failed to establish identity.</p>
                     <p>Detention review timeline:</p>
@@ -585,7 +587,7 @@ export default function ServicesPage() {
               {/* 17. Immigration Appeal Division */}
               <article id="iad" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">17. Immigration Appeal Division (IAD)</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Immigration Appeal Division (IAD)</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>The IAD has jurisdiction to review appeals in the following circumstances:</p>
                     <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-600">
@@ -604,7 +606,7 @@ export default function ServicesPage() {
               {/* 18. Refugee Appeal Division */}
               <article id="rad" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">18. Refugee Appeal Division (RAD)</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Refugee Appeal Division (RAD)</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Failed refugee claimants may appeal RPD decisions to the RAD on questions of law, fact, or mixed law and fact.</p>
                     <p>Filing deadlines:</p>
@@ -629,7 +631,7 @@ export default function ServicesPage() {
               {/* 19. Pre-Removal Risk Assessment */}
               <article id="prra" className="scroll-mt-28 mb-16">
                 <AnimatedSection>
-                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">19. Pre-Removal Risk Assessment (PRRA)</h2>
+                  <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Pre-Removal Risk Assessment (PRRA)</h2>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <p>Persons subject to removal orders may apply for PRRA to determine whether evidence indicates more than a mere possibility of persecution, torture, or risk to life upon removal to their country of nationality.</p>
                     <p>Eligible PRRA applicants include:</p>

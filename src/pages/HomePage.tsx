@@ -10,6 +10,8 @@ import {
   Clock,
   CheckCircle2,
   ChevronRight,
+  Scale,
+  BookOpen,
 } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import CounterAnimation from '../components/CounterAnimation';
@@ -239,7 +241,7 @@ export default function HomePage() {
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AnimatedSection delay={0}>
+            <AnimatedSection delay={0} className="h-full">
               <ServiceCard
                 icon={<Globe className="w-6 h-6" />}
                 title="Immigrate"
@@ -248,7 +250,7 @@ export default function HomePage() {
                 index={0}
               />
             </AnimatedSection>
-            <AnimatedSection delay={0.1}>
+            <AnimatedSection delay={0.1} className="h-full">
               <ServiceCard
                 icon={<GraduationCap className="w-6 h-6" />}
                 title="Visit & Study"
@@ -257,7 +259,7 @@ export default function HomePage() {
                 index={1}
               />
             </AnimatedSection>
-            <AnimatedSection delay={0.2}>
+            <AnimatedSection delay={0.2} className="h-full">
               <ServiceCard
                 icon={<Briefcase className="w-6 h-6" />}
                 title="Work in Canada"
@@ -266,7 +268,7 @@ export default function HomePage() {
                 index={2}
               />
             </AnimatedSection>
-            <AnimatedSection delay={0.3}>
+            <AnimatedSection delay={0.3} className="h-full">
               <ServiceCard
                 icon={<Shield className="w-6 h-6" />}
                 title="Other Services"
@@ -334,37 +336,34 @@ export default function HomePage() {
             <div>
               <AnimatedSection>
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-4">
-                  // Why Choose Us
+                  // Our Credentials
                 </span>
                 <h2 className="text-4xl md:text-5xl font-heading font-bold text-blue-950 mb-6 leading-tight">
-                  Expert Guidance for
-                  <br />
-                  Your <span className="text-gradient-cyan">Canadian Dream</span>
+                  Why We <span className="text-gradient-cyan">Stand Out</span>
                 </h2>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.1}>
-                <p className="text-gray-500 leading-relaxed mb-8">
-                  In our free assessment session, we carefully assess your circumstance and qualifications and provide our preliminary opinion on whether you would qualify for applying to Canada. If you do not qualify, we will let you know at the first available opportunity so that you need not pay fees unnecessarily.
-                </p>
               </AnimatedSection>
 
               <div className="space-y-4">
                 {[
                   {
-                    icon: <Users className="w-5 h-5" />,
-                    title: 'Personalized Assessment',
-                    desc: 'Every case is unique. We carefully analyze your background to find the best pathway.',
-                  },
-                  {
-                    icon: <Shield className="w-5 h-5" />,
-                    title: 'CICC Certified',
-                    desc: 'Headed by a Regulated Canadian Immigration Consultant recognized by CICC.',
-                  },
-                  {
                     icon: <Award className="w-5 h-5" />,
-                    title: 'Decades of Experience',
-                    desc: 'Over 30 years of combined experience in Law, Immigration, and International Affairs.',
+                    title: 'RCIC Certified',
+                    desc: 'Regulated Canadian Immigration Consultant of ICCRC',
+                  },
+                  {
+                    icon: <Scale className="w-5 h-5" />,
+                    title: 'Legal Expertise',
+                    desc: 'Attorney-at-Law with LL.B and LL.M qualifications',
+                  },
+                  {
+                    icon: <Globe className="w-5 h-5" />,
+                    title: 'Global Experience',
+                    desc: 'Worked across Canada, Sri Lanka, and UAE',
+                  },
+                  {
+                    icon: <BookOpen className="w-5 h-5" />,
+                    title: '30+ Years',
+                    desc: 'Decades of experience in Law and Immigration',
                   },
                 ].map((item, i) => (
                   <div key={i}>
@@ -399,43 +398,6 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
-
-      {/* ═══════════════ NEWS PREVIEW ═══════════════ */}
-      <section className="section-padding bg-gray-50">
-        <div className="page-container">
-          <AnimatedSection className="text-center mb-12">
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-4">
-              // Latest Immigration News
-            </span>
-            <h2 className="text-4xl font-heading font-bold text-blue-950">
-              Stay Informed
-            </h2>
-          </AnimatedSection>
-
-          <AnimatedSection delay={0.1}>
-            <div className="bg-white rounded-2xl shadow-premium overflow-hidden hover-lift group max-w-3xl mx-auto">
-              <div className="p-8 md:p-12">
-                <span className="inline-block px-3 py-1 bg-cyan-100 text-cyan-600 text-xs font-semibold rounded-full mb-4">
-                  Legislative Update
-                </span>
-                <h3 className="text-2xl font-heading font-bold text-blue-950 mb-4 group-hover:text-cyan-600 transition-colors">
-                  Bill To Amend The Canadian Citizenship Act
-                </h3>
-                <p className="text-gray-500 leading-relaxed mb-6">
-                  Important changes in the proposed amendment (Bill C-6) — Under the proposed amendments, the amount of time permanent residents have to live in Canada to become eligible to apply for citizenship has been reduced to three out of five years...
-                </p>
-                <Link
-                  to="/news"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-500 transition-colors group/link"
-                >
-                  Read Full Article
-                  <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 

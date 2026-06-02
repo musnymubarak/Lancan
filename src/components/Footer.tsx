@@ -46,13 +46,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <img src={logoUrl} alt="LanCan Immigration" className="h-[40px] object-contain brightness-0 invert" />
+              <img src={logoUrl} alt="LanCan Immigration" className="h-[70px] object-contain brightness-0 invert" />
             </div>
             <p className="text-sm text-white/50 leading-relaxed mb-6">
               A full service immigration consultancy firm in Ontario, Canada. Headed by a Regulated Canadian Immigration Consultant with over 30 years of experience.
             </p>
             <div className="mt-6">
-              <img src={ciccLogoUrl} alt="CICC Certified" className="h-[90px] object-contain" />
+              <img src={ciccLogoUrl} alt="CICC Certified" className="h-[90px] object-contain object-left" />
             </div>
           </div>
 

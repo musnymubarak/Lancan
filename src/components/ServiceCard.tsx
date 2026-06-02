@@ -13,7 +13,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ icon, title, description, link, index = 0 }: ServiceCardProps) {
   return (
     <div
-      className="group relative glass-light backdrop-blur-xl rounded-3xl p-8 shadow-premium hover-lift hover:shadow-cyan border border-white/40 overflow-hidden"
+      className="group relative glass-light backdrop-blur-xl h-full rounded-3xl p-8 shadow-premium hover-lift hover:shadow-cyan border border-white/40 overflow-hidden"
       style={{
         transitionDelay: `${index * 0.05}s`,
       }}

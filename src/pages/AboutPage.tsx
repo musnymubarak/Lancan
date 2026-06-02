@@ -100,14 +100,14 @@ export default function AboutPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <Award className="w-7 h-7" />, title: 'RCIC Certified', desc: 'Regulated Canadian Immigration Consultant of ICCRC' },
+              { icon: <Award className="w-7 h-7" />, title: 'CICC Certified', desc: 'Regulated Canadian Immigration Consultant of CICC' },
               { icon: <Scale className="w-7 h-7" />, title: 'Legal Expertise', desc: 'Attorney-at-Law with LL.B and LL.M qualifications' },
               { icon: <Globe className="w-7 h-7" />, title: 'Global Experience', desc: 'Worked across Canada, Sri Lanka, and UAE' },
               { icon: <BookOpen className="w-7 h-7" />, title: '30+ Years', desc: 'Decades of experience in Law and Immigration' },
             ].map((item, i) => (
-              <div key={i}>
-                <AnimatedSection delay={i * 0.1}>
-                  <div className="glass-light p-8 rounded-3xl shadow-premium text-center hover-lift hover:shadow-cyan group border border-white/50">
+              <div key={i} className="h-full">
+                <AnimatedSection delay={i * 0.1} className="h-full">
+                  <div className="glass-light h-full p-8 rounded-3xl shadow-premium text-center hover-lift hover:shadow-cyan group border border-white/50">
                     <div className="w-16 h-16 mx-auto mb-5 rounded-2xl glass flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
                       {item.icon}
                     </div>
