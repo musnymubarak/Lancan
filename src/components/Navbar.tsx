@@ -122,15 +122,19 @@ export default function Navbar() {
               >
                 <Link
                   to={link.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
-                    isActive(link.path)
-                      ? isScrolled
-                        ? 'text-cyan-600 bg-cyan-100'
-                        : 'text-cyan-400 bg-white/10'
-                      : isScrolled
-                        ? 'text-gray-600 hover:text-blue-950 hover:bg-gray-50'
-                        : 'text-white/80 hover:text-white hover:bg-white/10'
-                  }`}
+                  className={
+                    link.name === 'Contact'
+                      ? 'ml-2 px-5 py-2 bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-semibold rounded-lg shadow-premium hover:shadow-cyan transition-all active:scale-95'
+                      : `px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
+                          isActive(link.path)
+                            ? isScrolled
+                              ? 'text-cyan-600 bg-cyan-100'
+                              : 'text-cyan-400 bg-white/10'
+                            : isScrolled
+                              ? 'text-gray-600 hover:text-blue-950 hover:bg-gray-50'
+                              : 'text-white/80 hover:text-white hover:bg-white/10'
+                        }`
+                  }
                 >
                   {link.name}
                   {link.dropdown && <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === link.name ? 'rotate-180' : ''}`} />}
@@ -164,13 +168,6 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-
-            <Link
-              to="/contact"
-              className="ml-4 px-6 py-2.5 bg-cyan-500 text-white text-sm font-semibold rounded-lg hover:bg-cyan-600 transition-all hover:shadow-cyan active:scale-95"
-            >
-              Free Consultation
-            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -198,11 +195,15 @@ export default function Navbar() {
                   <div key={link.name}>
                     <Link
                       to={link.path}
-                      className={`block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                        isActive(link.path)
-                          ? 'text-cyan-600 bg-cyan-100'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
+                      className={
+                        link.name === 'Contact'
+                          ? 'block w-full mt-4 px-6 py-3 bg-cyan-500 text-white text-sm font-semibold rounded-xl text-center hover:bg-cyan-600 transition-colors shadow-premium hover:shadow-cyan'
+                          : `block px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
+                              isActive(link.path)
+                                ? 'text-cyan-600 bg-cyan-100'
+                                : 'text-gray-700 hover:bg-gray-50'
+                            }`
+                      }
                     >
                       {link.name}
                     </Link>
@@ -229,13 +230,6 @@ export default function Navbar() {
                   </div>
                 ))}
               </div>
-
-              <Link
-                to="/contact"
-                className="mt-6 block w-full px-6 py-3 bg-cyan-500 text-white text-sm font-semibold rounded-xl text-center hover:bg-cyan-600 transition-colors"
-              >
-                Free Consultation
-              </Link>
 
               <div className="mt-8 pt-6 border-t border-gray-100">
                 <a href="tel:+16476737569" className="flex items-center gap-2 text-sm text-gray-500 mb-3">
