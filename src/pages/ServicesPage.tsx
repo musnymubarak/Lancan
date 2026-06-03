@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Mail } from 'lucide-react';
 import AnimatedSection from '../components/AnimatedSection';
 import visitStudyImg from '../images/visit_study.png';
-import visitCanadaImg from '../images/visit_canada.png';
 import immigrateImg from '../images/immigrate.png';
 import workCanadaImg from '../images/work_canada.png';
 import otherServicesImg from '../images/other_services.png';
@@ -169,7 +168,7 @@ export default function ServicesPage() {
                 <AnimatedSection>
                   <h2 className="text-3xl font-heading font-bold text-blue-950 mb-6 pb-4 border-b border-gray-100">Visit Canada</h2>
                   <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
-                    <img src={visitCanadaImg} alt="Visit Canada" className="w-full h-full object-cover" />
+                    <img src={immigrateImg} alt="Visit Canada" className="w-full h-full object-cover" />
                   </div>
                   <div className="space-y-4 text-gray-600 leading-relaxed">
                     <h3 className="text-xl font-heading font-bold text-blue-950 mt-6 mb-4">Temporary Resident Visa (Tourist)</h3>
@@ -234,11 +233,6 @@ export default function ServicesPage() {
               {/* ─────── IMMIGRATE ─────── */}
               <div className="mt-20 mb-8">
                 <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-cyan-600 mb-2">// Immigrate to Canada</span>
-                <AnimatedSection className="mt-4">
-                  <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 h-[300px] mb-8 bg-white">
-                    <img src={immigrateImg} alt="Immigrate to Canada" className="w-full h-full object-cover" />
-                  </div>
-                </AnimatedSection>
               </div>
 
               {/* 1. Express Entry */}

@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="page-container py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl font-heading font-bold mb-2">Ready to Start Your Immigration Journey?</h3>
-            <p className="text-white/50 text-sm">Schedule a free assessment with our RCIC-certified consultant.</p>
+            <p className="text-white/50 text-sm">Schedule a free assessment with our CICC-certified consultant.</p>
           </div>
           <Link
             to="/contact"

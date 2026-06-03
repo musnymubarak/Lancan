@@ -20,7 +20,7 @@ import ServiceCard from '../components/ServiceCard';
 import homeImg from '../images/home.jpeg';
 import homw2Img from '../images/homw-2.jpeg';
 import canadaHdImg from '../images/canada-hd.jpeg';
-import canadaImg from '../images/canada.jpeg';
+import canadaImg from '../images/canada1.png';
 import heroBgImg from '../images/hero-backround.jpeg';
 
 export default function HomePage() {
@@ -348,7 +348,7 @@ export default function HomePage() {
                   {
                     icon: <Award className="w-5 h-5" />,
                     title: 'CICC Certified',
-                    desc: 'Regulated Canadian Immigration Consultant of ICCRC',
+                    desc: 'Regulated Canadian Immigration Consultant of CICC',
                   },
                   {
                     icon: <Scale className="w-5 h-5" />,

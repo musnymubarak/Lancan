@@ -126,17 +126,17 @@ export default function AboutPage() {
         <div className="page-container">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Sidebar */}
-            <AnimatedSection className="lg:col-span-2 h-full" direction="right">
-              <div className="flex flex-col h-full space-y-6">
-                <div className="rounded-2xl overflow-hidden shadow-premium border border-gray-150 bg-white shrink-0">
+            <AnimatedSection className="lg:col-span-2" direction="right">
+              <div className="lg:sticky lg:top-32 flex flex-col space-y-6">
+                <div className="w-56 h-56 mx-auto rounded-full overflow-hidden shadow-premium border-4 border-white bg-white shrink-0">
                   <img
                     src={founderImg}
                     alt="Chandralal Attanapola"
-                    className="w-full h-[380px] object-cover object-center"
+                    className="w-full h-full object-cover object-center"
                   />
                 </div>
 
-                <div className="bg-blue-950 rounded-2xl p-8 text-white flex-1 flex flex-col justify-between">
+                <div className="bg-blue-950 rounded-2xl p-8 text-white flex flex-col">
                   <div>
                     <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-cyan-500 flex items-center justify-center">
                       <span className="text-3xl font-heading font-bold text-white">CA</span>
@@ -207,7 +207,7 @@ export default function AboutPage() {
                 <div className="mt-8 p-6 bg-cyan-100 rounded-2xl border border-cyan-200">
                   <h4 className="font-heading font-bold text-blue-950 mb-3">CICC Accreditation</h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Chandralal Attanapola is a Regulated Canadian Immigration Consultant of the College of Immigration and Citizenship Consultants (CICC). CICC is the only regulatory body for the Immigration Consultants in Canada. Citizenship and Immigration Canada (CIC) has recognized members of the ICCRC as authorized representatives who can represent people on immigration matters.
+                    Chandralal Attanapola is a Regulated Canadian Immigration Consultant of the College of Immigration and Citizenship Consultants (CICC). CICC is the only regulatory body for the Immigration Consultants in Canada. Citizenship and Immigration Canada (CIC) has recognized members of the CICC as authorized representatives who can represent people on immigration matters.
                   </p>
                 </div>
               </AnimatedSection>
