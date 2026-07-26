@@ -12,14 +12,8 @@ export default function ContactPage() {
     message: '',
   });
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Immigration Inquiry - ${formData.service || 'General'}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:lancanimmigration@gmail.com?subject=${subject}&body=${body}`;
-  };
+  // Form submission will be handled natively by FormSubmit.co
+  // formData state is kept to maintain the controlled inputs
 
   return (
     <>
@@ -141,12 +135,18 @@ export default function ContactPage() {
                   <h2 className="text-2xl font-heading font-bold text-blue-950 mb-2">Send Us a Message</h2>
                   <p className="text-sm text-gray-500 mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form action="https://formsubmit.co/lancanimmigration@gmail.com" method="POST" className="space-y-6">
+                    {/* FormSubmit.co Configuration */}
+                    <input type="hidden" name="_subject" value="New Website Message - Lancan Immigration" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="contact-name" className="block text-sm font-medium text-blue-950 mb-2">Full Name *</label>
                         <input
                           id="contact-name"
+                          name="name"
                           type="text"
                           required
                           value={formData.name}
@@ -159,6 +159,7 @@ export default function ContactPage() {
                         <label htmlFor="contact-email" className="block text-sm font-medium text-blue-950 mb-2">Email Address *</label>
                         <input
                           id="contact-email"
+                          name="email"
                           type="email"
                           required
                           value={formData.email}
@@ -174,6 +175,7 @@ export default function ContactPage() {
                         <label htmlFor="contact-phone" className="block text-sm font-medium text-blue-950 mb-2">Phone Number</label>
                         <input
                           id="contact-phone"
+                          name="phone"
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -185,6 +187,7 @@ export default function ContactPage() {
                         <label htmlFor="contact-service" className="block text-sm font-medium text-blue-950 mb-2">Service Interested In</label>
                         <select
                           id="contact-service"
+                          name="service"
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-500 transition-all bg-white"
@@ -213,6 +216,7 @@ export default function ContactPage() {
                       <label htmlFor="contact-message" className="block text-sm font-medium text-blue-950 mb-2">Message *</label>
                       <textarea
                         id="contact-message"
+                        name="message"
                         required
                         rows={5}
                         value={formData.message}

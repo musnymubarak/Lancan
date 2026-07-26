@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import NewsPage from './pages/NewsPage';
 import ContactPage from './pages/ContactPage';
+import NewsSubmitPage from './pages/NewsSubmitPage';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/news" element={<NewsPage />} />
+        <Route path="/news/submit" element={<NewsSubmitPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>
